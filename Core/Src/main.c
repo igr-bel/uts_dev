@@ -369,7 +369,7 @@ void usbCOMStartTask(void *argument)
 	HAL_Delay(2000);
 	HAL_GPIO_WritePin(USB_PowerSwitchOn_GPIO_Port, USB_PowerSwitchOn_Pin, GPIO_PIN_SET);
 
-	uint8_t tr_data[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42};
+	uint8_t tr_data[8] = {0x42, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
   for(;;)
   {
 	  CDC_Transmit_FS(tr_data, 8);
